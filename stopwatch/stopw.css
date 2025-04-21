@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: hsl(0, 0%, 100%);
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin: 0 0 1.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#display {
+    font-size: 3.5rem;
+    font-family: 'Courier New', monospace;
+    margin: 1.5rem 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 1.5rem 0;
+}
+
+.controls button {
+    padding: 12px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
+
+#startBtn {
+    background: rgba(72, 187, 120, 0.3);
+}
+
+#startBtn:hover {
+    background: rgba(72, 187, 120, 0.4);
+}
+
+#pauseBtn {
+    background: rgba(237, 137, 54, 0.3);
+}
+
+#pauseBtn:hover {
+    background: rgba(237, 137, 54, 0.4);
+}
+
+#resetBtn {
+    background: rgba(229, 62, 62, 0.3);
+}
+
+#resetBtn:hover {
+    background: rgba(229, 62, 62, 0.4);
+}
+
+#lapBtn {
+    background: rgba(66, 153, 225, 0.3);
+}
+
+#lapBtn:hover {
+    background: rgba(66, 153, 225, 0.4);
+}
+
+.lap-container {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap-container h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#lapList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lapList li {
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Scrollbar styling */
+.lap-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lap-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.lap-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.lap-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
